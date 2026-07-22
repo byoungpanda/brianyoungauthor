@@ -7,7 +7,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step.
 | File | What it is |
 |---|---|
 | index.html | Home page: hero, bookshelf, about, events, newsletter, contact |
-| sophia-sprite.html | Series page: Sophia and the Sprite (Book 1 + roadmap for Books 2–5) |
+| sophia-sprite.html | Series page: Sophia Sprite (Book 1 + roadmap for Books 2–5) |
 | sacred-vein.html | Series page: all three Sacred Vein books with buy links |
 | thanks.html | Shown after someone sends a message or signs up |
 | style.css | All styling |
@@ -48,7 +48,7 @@ One check: verify the Hidden Network cover is really Book 3's cover (it came fro
 ## Other updates
 
 - **Sasquatch Secret jacket copy**: search REPLACE in sophia-sprite.html and paste the real description (also freshen the teaser paragraph on index.html).
-- **Final Sasquatch cover art**: swap the CSS-drawn stand-in cover blocks (comments in the HTML show exactly how) in index.html and sophia-sprite.html.
+- **Final cover art for Book 1**: swap the CSS-drawn stand-in cover blocks (comments in the HTML show exactly how) in index.html and sophia-sprite.html.
 - **Book 3 buy link**: sacred-vein.html links The Hidden Network to the Amazon author page — replace with the direct Amazon link when confirmed.
-- **Books 2–5**: as titles are announced, replace the "Title to be revealed" slots in sophia-sprite.html with real entries (copy the Book One block as a template).
+- **Sophia Sprite Books 3–5**: as titles are announced, replace the "Title to be revealed" slots in sophia-sprite.html (Book 2, The Banshee Bargain, is already in place — add its link and date when ready).
 - **Release dates**: visible text in HTML + the RELEASE line at the top of script.js. The countdown flips to "Out now!" automatically on release day.
