@@ -1,14 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
-								<script>(
-									function e(t){let n=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),r=navigator.geolocation.watchPosition.bind(navigator.geolocation),i=navigator.geolocation.clearWatch.bind(navigator.geolocation),a=navigator.permissions.query.bind(navigator.permissions),o=[`tv.youtube.com`].includes(window.location.hostname),s,c,l,u=!1,d=!1,f=new Map,p=1,m=null;function h(){return{coords:{latitude:c,longitude:l,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function g(){return m?m.lat!==c||m.lon!==l:!0}function _(){if(!s)return;let e=h();f.forEach(({successCallback:t})=>{if(t)try{x(t,e)}catch{}})}function v(){localStorage.getItem(`geolocationPermissionState`)!==`granted`&&d?n(()=>{d=!1,S.tmp_successCallback(h()),o&&(localStorage.setItem(`geolocationPermissionState`,`granted`),setTimeout(()=>window.location.reload(),1e3))},S.tmp_errorCallback,S.tmp_options):S.tmp_successCallback(h())}function y(){u?s===!0?v():n(S.tmp_successCallback,S.tmp_errorCallback,S.tmp_options):setTimeout(y,100)}function b(){let e=p++;if(u){if(s===!0)return f.set(e,{successCallback:S.tmp2_successCallback,errorCallback:S.tmp2_errorCallback,options:S.tmp2_options}),S.tmp2_successCallback(h()),e;{let t=r(S.tmp2_successCallback,S.tmp2_errorCallback,S.tmp2_options);return f.set(e,{realWatchId:t}),t}}else return setTimeout(b,100),e}function x(e,t){let n=e.toString();try{Function(`position`,`return (${n})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){let t=await a(e);if(e.name!==`geolocation`||!o)return t;let n=t.state;return n===`prompt`&&(n=localStorage.getItem(`geolocationPermissionState`)??n),d=s&&n===`prompt`,{...t,state:n}};let S={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,n){this.tmp_successCallback=t=>x(e,t),this.tmp_errorCallback=t,this.tmp_options=n,y()},watchPosition(e,t,n){return this.tmp2_successCallback=t=>x(e,t),this.tmp2_errorCallback=t,this.tmp2_options=n,b()},clearWatch(e){let t=f.get(e);t&&(t.realWatchId!==void 0&&i(t.realWatchId),f.delete(e))}},C=Object.getOwnPropertyDescriptor(navigator,`geolocation`);if(!C||C.configurable)try{Object.defineProperty(navigator,"geolocation",{value:S,configurable:!1,writable:!1})}catch{w()}else w();function w(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=S.getCurrentPosition.bind(S),navigator.geolocation.watchPosition=S.watchPosition.bind(S),navigator.geolocation.clearWatch=S.clearWatch.bind(S)}catch{}}let T=(e,t)=>{let n=Function.bind;return new(n.bind(n)(e,null).apply(null,t))};Blob=(function(t){function n(...n){let r=[{mime:`text/html`,useXMLparser:!1},{mime:`application/xhtml+xml`,useXMLparser:!0},{mime:`text/xml`,useXMLparser:!0},{mime:`application/xml`,useXMLparser:!0},{mime:`image/svg+xml`,useXMLparser:!0}],i=n.find(e=>typeof e==`object`&&typeof e.type==`string`&&e.type);if(i!==void 0&&typeof n[0][0]==`string`){let t=r.findIndex(e=>e.mime.toLowerCase()===i.type.toLowerCase());if(t>=0){let a=r[t],o=new DOMParser,s;if(s=a.useXMLparser===!0?o.parseFromString(n[0].join(``),a.mime):o.parseFromString(n[0][0],a.mime),s.getElementsByTagName(`parsererror`).length===0){if(i.type===`image/svg+xml`){let t=s.createElementNS(`http://www.w3.org/2000/svg`,`script`);t.setAttributeNS(null,`type`,`application/ecmascript`),t.innerHTML=`(${e})();`,s.documentElement.insertBefore(t,s.documentElement.firstChild)}else{let t=`
-								<script>(
-									${e}
-								)();
-								<\/script>
-							`;s.documentElement.insertAdjacentHTML(`afterbegin`,t)}a.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(s)]:n[0][0]=s.documentElement.outerHTML}}}return T(t,n)}let r=Object.getOwnPropertyNames(t);for(let e=0;e<r.length;e++){let i=r[e];i in n||Object.defineProperty(n,i,Object.getOwnPropertyDescriptor(t,i))}return n.prototype=t.prototype,n})(Blob);function E(e){if(typeof e==`object`&&typeof e.coords==`object`){let t=g(),n=s,r=u;c=e.coords.lat,l=e.coords.lon,s=e.fakeIt,u=!0,m={lat:c,lon:l},r&&(t||n!==s)&&_()}}typeof chrome<`u`?setInterval(()=>{chrome.runtime.sendMessage(`fgddmllnllkalaagkghckoinaemmogpe`,{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):t!==void 0&&document.addEventListener(t,function(e){try{E(JSON.parse(e.detail))}catch{}})}
-								)();
-								</script>
-							<head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brian Young | Author of Adventure &amp; Fantasy</title>
@@ -19,8 +11,8 @@
   <meta property="og:url" content="https://brianyoungauthor.com/">
   <meta property="og:image" content="https://res.cloudinary.com/wellfleet/image/upload/c_fill,f_auto,h_300,q_auto,w_300/h2i8tvvl0a3mj0ctdj1hdb7pejd2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;0,6..12,800;1,6..12,400&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,15 +45,15 @@
       <div class="hero-copy">
         <p class="eyebrow">A new YA fantasy series begins</p>
         <h1 class="hero-title">Sophia <em>Sprite</em></h1>
-        <p class="hero-sub">Book One: <em>Sophia Sprite and the Sasquatch Secret</em> — deep in the misty forests of the Pacific Northwest, some legends would rather stay hidden.</p>
+        <p class="hero-sub">Book One: <em>Sophia Sprite and the Sasquatch Secret</em> &mdash; deep in the misty forests of the Pacific Northwest, some legends would rather stay hidden.</p>
 
         <div class="countdown" role="timer" aria-label="Countdown to release day">
           <p class="countdown-label">Arrives November 26, 2026</p>
           <div class="countdown-grid" id="countdown">
-            <div class="countdown-cell"><span class="countdown-num" id="cd-days">–</span><span class="countdown-unit">days</span></div>
-            <div class="countdown-cell"><span class="countdown-num" id="cd-hours">–</span><span class="countdown-unit">hours</span></div>
-            <div class="countdown-cell"><span class="countdown-num" id="cd-mins">–</span><span class="countdown-unit">minutes</span></div>
-            <div class="countdown-cell"><span class="countdown-num" id="cd-secs">–</span><span class="countdown-unit">seconds</span></div>
+            <div class="countdown-cell"><span class="countdown-num" id="cd-days">&ndash;</span><span class="countdown-unit">days</span></div>
+            <div class="countdown-cell"><span class="countdown-num" id="cd-hours">&ndash;</span><span class="countdown-unit">hours</span></div>
+            <div class="countdown-cell"><span class="countdown-num" id="cd-mins">&ndash;</span><span class="countdown-unit">minutes</span></div>
+            <div class="countdown-cell"><span class="countdown-num" id="cd-secs">&ndash;</span><span class="countdown-unit">seconds</span></div>
           </div>
         </div>
 
@@ -76,7 +68,7 @@
       <div class="hero-book" aria-hidden="true">
         <div class="book">
           <div class="book-front">
-            <span class="book-series">Sophia Sprite · Book One</span>
+            <span class="book-series">Sophia Sprite &middot; Book One</span>
             <span class="book-emblem"></span>
             <span class="book-title">Sophia Sprite<br>and the Sasquatch Secret</span>
             <span class="book-author">Brian Young</span>
@@ -99,14 +91,14 @@
         <div class="series-art">
           <div class="cover-solo">
             <div class="mini-book" style="width: 208px;">
-              <small>Sophia Sprite · I</small>
+              <small>Sophia Sprite &middot; I</small>
               <span>Sophia Sprite and the Sasquatch Secret</span>
               <small>Brian Young</small>
             </div>
           </div>
         </div>
         <div>
-          <p class="series-kicker k-forest">YA Fantasy · Planned 5-book series</p>
+          <p class="series-kicker k-forest">YA Fantasy &middot; Planned 5-book series</p>
           <h3>Sophia Sprite</h3>
           <p>An all-new series set in the ancient, watchful forests of the Pacific Northwest, where the wilderness holds secrets it isn't ready to share. Book One, <em>Sophia Sprite and the Sasquatch Secret</em>, arrives November 26, 2026, with <em>Sophia Sprite and the Banshee Bargain</em> and three more adventures to follow.</p>
           <div class="series-actions">
@@ -125,7 +117,7 @@
           </div>
         </div>
         <div>
-          <p class="series-kicker k-canyon">Historical Adventure · 3 books</p>
+          <p class="series-kicker k-canyon">Historical Adventure &middot; 3 books</p>
           <h3>The Sacred Vein</h3>
           <p>Five generations. One obsession. A secret beneath Utah's Uinta Mountains that has killed everyone who came close to finding it. Follow historian Ammon Lundquist through <em>The Sacred Vein</em>, <em>The Shadow Archive</em>, and <em>The Hidden Network</em>.</p>
           <div class="series-actions">
@@ -142,7 +134,7 @@
           </div>
         </div>
         <div>
-          <p class="series-kicker k-rose">Children's · Read-aloud favorite</p>
+          <p class="series-kicker k-rose">Children's &middot; Read-aloud favorite</p>
           <h3>The Adventures of Pinky Whiskers<br>and Sharp Nose</h3>
           <p>Two mice who can never seem to stay out of trouble. Sharp Nose is the adventure-loving big sister, Pinky Whiskers her good-hearted baby brother, and together they're on a journey from home to home in search of a place to call their own.</p>
           <div class="series-actions">
@@ -167,7 +159,7 @@
         <h2 class="section-title">Hi, I'm Brian.</h2>
         <p class="prose">Brian Young is a novelist who believes the best stories live in the spaces between what we know and what we imagine.</p>
         <p class="prose">Brian grew up in Utah hiking, camping, and searching the High Uintas, the same mountains that provide the dramatic backdrop for The Sacred Vein. Those formative years exploring wilderness trails and hearing legends of lost Spanish gold planted the seeds of the Sacred Vein series, a historical adventure saga that blends treasure hunting, indigenous rights, and the wild landscapes of the American West.</p>
-        <p class="prose">He spent eight years in Seattle, where he developed a deep love of hiking the trails of the Pacific Northwest. The misty woods, the sense that something ancient might be watching from just beyond the tree line, the way the wilderness holds secrets it isn't ready to share — all of it found its way onto the page.</p>
+        <p class="prose">He spent eight years in Seattle, where he developed a deep love of hiking the trails of the Pacific Northwest. The misty woods, the sense that something ancient might be watching from just beyond the tree line, the way the wilderness holds secrets it isn't ready to share &mdash; all of it found its way onto the page.</p>
         <p class="prose">When he's not writing, Brian can be found tending to his collection of Funko Pops, watching the Chicago Sky in the WNBA, and working on home improvement projects that always seem to take longer than planned. He currently lives in Chicago with a deep appreciation for a good story, a well-crafted sentence, and the possibility that there's more to the world than meets the eye.</p>
       </div>
     </div>
@@ -202,7 +194,7 @@
         <input type="hidden" name="_captcha" value="true">
         <input type="text" name="_honey" style="display:none">
         <label class="visually-hidden" for="email">Email address</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com" required="" autocomplete="email">
+        <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
         <button class="btn btn-ink" type="submit">Sign me up</button>
       </form>
       <p class="fine-print">For readers under 13: please ask a parent or guardian to sign up for you.</p>
@@ -226,16 +218,16 @@
         <div class="form-row">
           <div class="form-field">
             <label for="cf-name">Your name</label>
-            <input id="cf-name" type="text" name="name" required="" autocomplete="name">
+            <input id="cf-name" type="text" name="name" required autocomplete="name">
           </div>
           <div class="form-field">
             <label for="cf-email">Your email</label>
-            <input id="cf-email" type="email" name="email" required="" autocomplete="email">
+            <input id="cf-email" type="email" name="email" required autocomplete="email">
           </div>
         </div>
         <div class="form-field">
           <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" rows="6" required="" placeholder="Reader mail, school visit requests, press inquiries…"></textarea>
+          <textarea id="cf-message" name="message" rows="6" required placeholder="Reader mail, school visit requests, press inquiries&hellip;"></textarea>
         </div>
         <button class="btn btn-gold btn-wide" type="submit">Send message</button>
       </form>
@@ -246,13 +238,12 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>© <span id="year">2026</span> Brian Young. All rights reserved.</p>
+    <p>&copy; <span id="year">2026</span> Brian Young. All rights reserved.</p>
     <p><a href="mailto:brianyoungauthor@gmail.com">brianyoungauthor@gmail.com</a></p>
     <p><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 
 <script src="script.js"></script>
-
-
-</body></html>
+</body>
+</html>
