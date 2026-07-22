@@ -82,7 +82,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-family: var(--display); font-size: 1.55rem; font-weight: 700;
   color: var(--paper); text-decoration: none; letter-spacing: 0.02em;
 }
-.nav-brand span { color: var(--gold); font-style: italic; }
 
 .nav-links {
   display: flex; align-items: center; gap: 1.5rem;
@@ -182,7 +181,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: clamp(3rem, 7vw, 5.4rem);
   line-height: 0.98; margin: 0 0 1.1rem; letter-spacing: 0.005em;
 }
-.hero-title em { font-style: italic; color: var(--gold-soft); }
+.hero-title em { font-style: normal; color: inherit; }
 
 .hero-sub {
   font-size: 1.18rem; color: var(--moon-text);
