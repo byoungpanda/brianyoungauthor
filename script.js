@@ -5,7 +5,7 @@
 
   /* ---------- Countdown to release day ---------- */
   // Local time on Nov 26, 2026. Change this one line for future books.
-  var RELEASE = new Date(2026, 10, 26, 0, 0, 0); // months are 0-indexed: 10 = November
+  var RELEASE = new Date(2026, 10, 23, 0, 0, 0); // months are 0-indexed: 10 = November
 
   var els = {
     days: document.getElementById("cd-days"),
