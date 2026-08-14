@@ -70,7 +70,7 @@
 
   if (!reduced && "IntersectionObserver" in window) {
     var targets = document.querySelectorAll(
-      ".series-row, .book-entry, .roadmap-slot, .section-title, .section-lede, .fact-list, .event, .portrait, .contact-form"
+      ".series-row, .book-entry, .roadmap-slot, .section-title, .section-lede, .fact-list, .event, .portrait, .contact-form, .store-card"
     );
     targets.forEach(function (el) { el.classList.add("reveal"); });
 
