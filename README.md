@@ -13,7 +13,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | style.css | All styling |
 | script.js | Countdown, mobile menu, scroll animations |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
-| *.jpg | Book covers (sasquatch-secret, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photo (brian) |
+| *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photo (brian) |
 
 ## Hosting (already done)
 
