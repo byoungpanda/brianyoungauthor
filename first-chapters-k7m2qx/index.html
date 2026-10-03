@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read the First Three Chapters | Sophia Sprite and the Sasquatch Secret</title>
+  <!-- Newsletter-only page: keep it out of search engines and off the site's menus -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="A newsletter exclusive: read the first three chapters of Sophia Sprite and the Sasquatch Secret by Brian Young.">
+  <meta property="og:title" content="Read the first three chapters of Sophia Sprite and the Sasquatch Secret">
+  <meta property="og:description" content="A newsletter exclusive from Brian Young. Book One releases November 23, 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://brianyoungauthor.com/sasquatch-secret.jpg?v=3">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css?v=2">
+
+  <style>
+    /* Page-specific styles for the newsletter chapter preview */
+    .ex-hero-inner {
+      position: relative; max-width: var(--wrap); margin: 0 auto;
+      padding: 4rem 1.25rem 9.5rem;
+      display: grid; grid-template-columns: 0.75fr 1.25fr;
+      gap: 3rem; align-items: center;
+    }
+    .ex-cover img {
+      width: 280px; max-width: 100%; height: auto; margin: 0 auto; display: block;
+      border-radius: 6px 14px 14px 6px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+      transform: rotate(-2deg);
+    }
+    .ex-title {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(2.3rem, 5.5vw, 3.8rem);
+      line-height: 1.02; margin: 0 0 0.7rem; color: var(--paper);
+      max-width: 12ch; position: relative; z-index: 1;
+    }
+    .ex-book {
+      font-family: var(--display); font-style: italic; font-weight: 600;
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem); color: var(--gold-soft); margin: 0 0 1.1rem;
+    }
+    .ex-sub { font-size: 1.1rem; color: var(--moon-text); margin: 0 0 1.8rem; max-width: 34rem; }
+    .ex-alt { margin: 1.4rem 0 0; font-size: 0.98rem; color: var(--moon-text); }
+    .ex-alt a { color: var(--gold-soft); }
+
+    /* Reader */
+    .reader-section { background: #E7E4DC; padding: 3.5rem 0 4rem; }
+    .reader-head {
+      max-width: 760px; margin: 0 auto 1.6rem; padding: 0 1.25rem;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+    }
+    .reader-head h2 {
+      font-family: var(--display); font-size: 1.9rem; font-weight: 700;
+      margin: 0; color: var(--slate);
+    }
+    .reader-dl {
+      font-weight: 800; font-size: 0.92rem; color: #7A5A1C;
+      text-decoration: underline; text-underline-offset: 3px;
+    }
+    .reader-pages {
+      max-width: 760px; margin: 0 auto; padding: 0 1.25rem;
+      display: flex; flex-direction: column; gap: 1.4rem;
+    }
+    .pdf-page {
+      position: relative; width: 100%; background: #FFF;
+      border-radius: 4px; box-shadow: 0 8px 26px rgba(16, 22, 31, 0.16);
+      overflow: hidden;
+    }
+    .pdf-page canvas { display: block; width: 100%; height: 100%; }
+    .reader-status {
+      text-align: center; color: var(--slate-soft); font-weight: 700; margin: 2rem 0;
+    }
+    .reader-status a { color: #7A5A1C; }
+
+    /* Reading progress bar */
+    .read-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0;
+      background: var(--gold); z-index: 200; transition: width 0.1s linear;
+    }
+
+    /* End-of-preview call to action */
+    .ex-cta { text-align: center; }
+    .ex-cta .section-title { color: var(--paper); }
+    .ex-cta .hero-actions { justify-content: center; margin-top: 0.4rem; }
+    .ex-cta-link { display: block; margin-top: 1.1rem; color: var(--moon-text); font-weight: 700; }
+    .ex-cta-link:hover { color: var(--gold); }
+    .ex-cta-price { color: var(--moon-text); margin: 0 auto 1.6rem; max-width: 34rem; font-size: 1.08rem; }
+
+    @media (max-width: 940px) {
+      .ex-hero-inner { grid-template-columns: 1fr; text-align: center; padding-top: 3rem; padding-bottom: 8.5rem; gap: 2.2rem; }
+      .ex-cover img { width: 200px; }
+      .ex-sub, .ex-title { margin-inline: auto; }
+      .ex-hero-inner .hero-actions { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      .reader-section { padding: 2.2rem 0 2.8rem; }
+      .reader-head { padding: 0 16px; }
+      .reader-pages { padding: 0 8px; gap: 0.9rem; }
+      .pdf-page { border-radius: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="read-progress" id="read-progress" aria-hidden="true"></div>
+<a class="skip-link" href="#reader">Skip to the chapters</a>
+
+<header class="site-header" id="top">
+  <nav class="nav" aria-label="Main">
+    <a class="nav-brand" href="/index.html">Brian <span>Young</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/index.html#books">Books</a></li>
+      <li><a href="/sophia-sprite.html">Sophia Sprite</a></li>
+      <li><a href="/sacred-vein.html">The Sacred Vein</a></li>
+      <li><a href="/store.html">Store</a></li>
+      <li><a href="/index.html#about">About</a></li>
+      <li><a href="/index.html#contact">Contact</a></li>
+      <li><a class="nav-cta" href="/index.html#newsletter">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-stars" aria-hidden="true"></div>
+    <div class="ex-hero-inner">
+      <div class="ex-cover">
+        <img src="/sasquatch-secret.jpg?v=3" alt="Cover of Sophia Sprite and the Sasquatch Secret" width="800" height="1280" fetchpriority="high">
+      </div>
+      <div>
+        <p class="eyebrow">For newsletter readers</p>
+        <h1 class="ex-title">Read the first three chapters</h1>
+        <p class="ex-book">Sophia Sprite and the Sasquatch Secret</p>
+        <p class="ex-sub">Thanks for being on the list. Here's an early look at Book One, straight from the finished interior. Read it right here, or grab the PDF and take it with you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#reader">Start reading</a>
+          <a class="btn btn-ghost" href="sasquatch-secret-chapters-1-3.pdf" download="Sophia-Sprite-and-the-Sasquatch-Secret-Chapters-1-3.pdf">Download the PDF</a>
+        </div>
+        <p class="ex-alt">Rather listen? <a href="/listen-chapter-one-v9t4pz/">Hear Chapter One narrated by Bahni Turpin.</a></p>
+      </div>
+    </div>
+    <div class="hero-forest" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ READER ============ -->
+  <section class="reader-section" id="reader" aria-label="Chapters one through three">
+    <div class="reader-head">
+      <h2>Chapters 1 to 3</h2>
+      <a class="reader-dl" href="sasquatch-secret-chapters-1-3.pdf" download="Sophia-Sprite-and-the-Sasquatch-Secret-Chapters-1-3.pdf">Download PDF</a>
+    </div>
+    <div class="reader-pages" id="reader-pages"></div>
+    <p class="reader-status" id="reader-status" role="status">Loading the chapters…</p>
+    <noscript>
+      <p class="reader-status">The page-by-page reader needs JavaScript. <a href="sasquatch-secret-chapters-1-3.pdf">Open the PDF instead.</a></p>
+    </noscript>
+  </section>
+
+  <!-- ============ KEEP READING ============ -->
+  <section class="section section-dark ex-cta">
+    <div class="wrap wrap-narrow">
+      <p class="eyebrow eyebrow-center">Keep reading</p>
+      <h2 class="section-title">The rest of the story arrives November 23, 2026.</h2>
+      <p class="ex-cta-price">Preorder the ebook now for $4.99. The price goes to $8.99 after launch week.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://books2read.com/SophiaSprite1" target="_blank" rel="noopener">Preorder Book 1 for $4.99</a>
+      </div>
+      <a class="ex-cta-link" href="/preorder/#claim">Already preordered? Enter the drawing</a>
+      <a class="ex-cta-link" href="/listen-chapter-one-v9t4pz/">Listen to Chapter One</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; <span id="year">2026</span> Brian Young. All rights reserved.</p>
+    <p><a href="mailto:brianyoungauthor@gmail.com">brianyoungauthor@gmail.com</a></p>
+    <p><a href="/index.html">← Back home</a></p>
+  </div>
+</footer>
+
+<script src="/script.js?v=2"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var PDF_URL = "sasquatch-secret-chapters-1-3.pdf";
+  var WORKER = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  var pagesEl = document.getElementById("reader-pages");
+  var statusEl = document.getElementById("reader-status");
+  var bar = document.getElementById("read-progress");
+
+  function fail() {
+    statusEl.innerHTML = 'The reader could not load here. <a href="' + PDF_URL + '">Open the PDF instead.</a>';
+  }
+
+  /* Reading progress bar */
+  function updateProgress() {
+    var r = pagesEl.getBoundingClientRect();
+    var total = r.height - window.innerHeight;
+    var pct = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    if (r.top > 0) pct = 0;
+    bar.style.width = (pct * 100) + "%";
+  }
+  window.addEventListener("scroll", updateProgress, { passive: true });
+
+  if (!window.pdfjsLib) { fail(); return; }
+  pdfjsLib.GlobalWorkerOptions.workerSrc = WORKER;
+
+  /* On phones, trim most of the page margin so the type is bigger */
+  function cropPts() { return window.innerWidth <= 600 ? 32 : 0; }
+
+  var doc = null, slots = [], rendered = {}, rendering = {}, lastWidth = 0;
+
+  function renderPage(i) {
+    if (rendered[i] || rendering[i]) return;
+    rendering[i] = true;
+    doc.getPage(pageNums[i]).then(function (page) {
+      var slot = slots[i];
+      var crop = cropPts();
+      var base = page.getViewport({ scale: 1 });
+      var cssW = slot.clientWidth;
+      var scale = cssW / (base.width - crop * 2);
+      var dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+      var vp = page.getViewport({ scale: scale * dpr, offsetX: -crop * scale * dpr });
+      var canvas = slot.querySelector("canvas") || document.createElement("canvas");
+      canvas.width = Math.floor((base.width - crop * 2) * scale * dpr);
+      canvas.height = Math.floor(base.height * scale * dpr);
+      if (!canvas.parentNode) slot.insertBefore(canvas, slot.firstChild);
+      return page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
+    }).then(function () {
+      rendered[i] = true; rendering[i] = false;
+    }, function () { rendering[i] = false; });
+  }
+
+  /* Free memory for pages far off screen (helps older phones) */
+  function releasePage(i) {
+    if (!rendered[i]) return;
+    var c = slots[i].querySelector("canvas");
+    if (c) { c.width = 0; c.height = 0; }
+    rendered[i] = false;
+  }
+
+  function sizeSlots(ratio) {
+    var crop = cropPts();
+    for (var i = 0; i < slots.length; i++) {
+      slots[i].style.aspectRatio = (ratio.w - crop * 2) + " / " + ratio.h;
+    }
+  }
+
+  /* Find which pages have content so blank versos are skipped */
+  function contentPages(pdf) {
+    var checks = [];
+    for (var n = 1; n <= pdf.numPages; n++) {
+      checks.push(pdf.getPage(n).then(function (pg) {
+        return pg.getTextContent().then(function (tc) {
+          return tc.items.some(function (it) { return it.str && it.str.trim(); }) ? pg.pageNumber : 0;
+        });
+      }));
+    }
+    return Promise.all(checks).then(function (list) {
+      var keep = list.filter(function (x) { return x; });
+      return keep.length ? keep : list.map(function (x, k) { return k + 1; });
+    });
+  }
+
+  var pageNums = [];
+  pdfjsLib.getDocument({ url: PDF_URL }).promise.then(function (pdf) {
+    doc = pdf;
+    return contentPages(pdf);
+  }).then(function (nums) {
+    pageNums = nums;
+    return doc.getPage(nums[0]);
+  }).then(function (first) {
+    var vp = first.getViewport({ scale: 1 });
+    var ratio = { w: vp.width, h: vp.height };
+    for (var i = 0; i < pageNums.length; i++) {
+      var slot = document.createElement("div");
+      slot.className = "pdf-page";
+      slot.setAttribute("role", "img");
+      slot.setAttribute("aria-label", "Book page " + (i + 1) + " of " + pageNums.length);
+      slot.dataset.index = i;
+      pagesEl.appendChild(slot);
+      slots.push(slot);
+    }
+    sizeSlots(ratio);
+    statusEl.textContent = "";
+    statusEl.style.display = "none";
+    lastWidth = pagesEl.clientWidth;
+
+    if ("IntersectionObserver" in window) {
+      var near = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var idx = +e.target.dataset.index;
+          if (e.isIntersecting) renderPage(idx); else releasePage(idx);
+        });
+      }, { rootMargin: "1600px 0px" });
+      slots.forEach(function (s) { near.observe(s); });
+    } else {
+      for (var j = 0; j < slots.length; j++) renderPage(j);
+    }
+
+    /* Re-render crisp pages after rotation or a big resize */
+    var t;
+    window.addEventListener("resize", function () {
+      clearTimeout(t);
+      t = setTimeout(function () {
+        if (Math.abs(pagesEl.clientWidth - lastWidth) < 40) return;
+        lastWidth = pagesEl.clientWidth;
+        sizeSlots(ratio);
+        slots.forEach(function (s, k) {
+          var r = s.getBoundingClientRect();
+          rendered[k] = false;
+          if (r.bottom > -1600 && r.top < window.innerHeight + 1600) renderPage(k);
+        });
+      }, 250);
+    });
+    updateProgress();
+  }).catch(fail);
+})();
+</script>
+</body>
+</html>
