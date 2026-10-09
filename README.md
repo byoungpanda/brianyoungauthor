@@ -21,7 +21,7 @@ GitHub Pages deploys from the main branch root. Custom domain brianyoungauthor.c
 
 ## Forms (one-time activation!)
 
-The contact form and newsletter signups deliver to **brianyoungauthor@gmail.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. Easiest: submit the contact form yourself. Both forms have CAPTCHA + honeypot spam protection and redirect to thanks.html.
+The contact form and newsletter signups deliver to **hello@brianyoungauthor.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. Easiest: submit the contact form yourself. Both forms have CAPTCHA + honeypot spam protection and redirect to thanks.html.
 
 When the newsletter list grows, graduate to MailerLite or Buttondown (free tiers) for automated sends and unsubscribe handling — swap the form action URL or paste in their embed code.
 
