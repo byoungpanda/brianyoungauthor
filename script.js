@@ -65,6 +65,39 @@
     });
   }
 
+  /* ---------- Resources dropdown (desktop nav) ---------- */
+  var dropdowns = document.querySelectorAll(".nav-dropdown");
+
+  Array.prototype.forEach.call(dropdowns, function (dd) {
+    var btn = dd.querySelector(".nav-dropdown-toggle");
+    if (!btn) return;
+
+    function setOpen(open) {
+      dd.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    btn.addEventListener("click", function () {
+      setOpen(btn.getAttribute("aria-expanded") !== "true");
+    });
+
+    // Escape closes the menu and puts focus back on the button
+    dd.addEventListener("keydown", function (e) {
+      if ((e.key === "Escape" || e.key === "Esc") && dd.classList.contains("is-open")) {
+        setOpen(false);
+        btn.focus();
+      }
+    });
+
+    // Close when focus or a click moves somewhere else on the page
+    dd.addEventListener("focusout", function (e) {
+      if (e.relatedTarget && !dd.contains(e.relatedTarget)) setOpen(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (!dd.contains(e.target)) setOpen(false);
+    });
+  });
+
   /* ---------- Scroll reveal (respects reduced motion) ---------- */
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
