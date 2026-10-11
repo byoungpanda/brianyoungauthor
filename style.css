@@ -449,7 +449,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .section-light .book-num { color: #9A6A2C; }
 .section-dark .book-num { color: var(--gold); }
 
-.book-entry h3 {
+.book-entry h2, .book-entry h3 {
   font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 700; margin: 0 0 0.75rem; line-height: 1.12;
 }
@@ -764,4 +764,164 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .cover-fan img, .cover-fan .mini-book { width: 116px; }
   .store-grid { grid-template-columns: 1fr; }
   .store-card { max-width: 340px; margin: 0 auto; width: 100%; }
+}
+
+/* ============================================================
+   Resources (For Educators, For Librarians, Book Clubs)
+   Header dropdown, footer links, guide cards, ordering table
+   ============================================================ */
+
+/* Header dropdown on desktop; a plain nested list in the phone menu */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+  font: 700 0.92rem/1.7 var(--body); letter-spacing: 0.01em;
+  color: var(--moon-text); transition: color 0.2s ease;
+}
+.nav-dropdown-toggle:hover,
+.nav-dropdown.is-current .nav-dropdown-toggle,
+.nav-dropdown.is-open .nav-dropdown-toggle { color: var(--gold); }
+.nav-dropdown-toggle svg { width: 10px; height: 10px; transition: transform 0.2s ease; }
+.nav-dropdown.is-open .nav-dropdown-toggle svg { transform: rotate(180deg); }
+.nav-sub-label { display: none; }
+.nav-sub {
+  display: none; position: absolute; top: calc(100% + 1.25rem); left: 50%;
+  transform: translateX(-50%); min-width: 12.5rem;
+  list-style: none; margin: 0; padding: 0.5rem;
+  background: var(--ink-2); border: 1px solid rgba(228, 180, 84, 0.3);
+  border-radius: 12px; box-shadow: var(--shadow-lg);
+}
+/* Bridge the gap so the pointer can move from the button into the menu */
+.nav-sub::before { content: ""; position: absolute; left: 0; right: 0; top: -1.35rem; height: 1.35rem; }
+.nav-dropdown.is-open .nav-sub { display: block; }
+.nav-sub a { display: block; padding: 0.55rem 0.9rem; border-radius: 8px; white-space: nowrap; }
+.nav-sub a:hover, .nav-sub a[aria-current="page"] { background: rgba(228, 180, 84, 0.1); }
+
+@media (hover: hover) and (min-width: 901px) {
+  .nav-dropdown:hover .nav-sub { display: block; }
+  .nav-dropdown:hover .nav-dropdown-toggle svg { transform: rotate(180deg); }
+}
+
+/* Eight menu items: tighten the spacing until the phone menu takes over */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .nav-links { gap: 1.1rem; }
+  .nav-cta { padding: 0.5rem 0.95rem; }
+}
+
+@media (max-width: 900px) {
+  .nav-links.is-open { max-height: calc(100vh - 64px); max-height: calc(100dvh - 64px); overflow-y: auto; }
+  .nav-dropdown-toggle { display: none; }
+  .nav-sub-label {
+    display: block; padding: 0.85rem 1.25rem 0.2rem;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em;
+    text-transform: uppercase; color: #93A3C0;
+  }
+  .nav-sub {
+    display: block; position: static; transform: none; min-width: 0;
+    padding: 0 0 0.45rem; background: none; border: 0; border-radius: 0; box-shadow: none;
+  }
+  .nav-sub::before { display: none; }
+  .nav-links .nav-sub li { border-top: 0; }
+  .nav-links .nav-sub a { padding: 0.55rem 1.25rem 0.55rem 2.25rem; border-radius: 0; white-space: normal; }
+  .nav-sub a[aria-current="page"] { background: none; }
+}
+
+/* Footer links */
+.footer-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; }
+
+/* Guide and kit cards (built on the store card) */
+.store-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.section-dark .store-card { color: var(--slate); }
+.store-body h4 {
+  font-family: var(--display); font-size: 1.45rem; font-weight: 700;
+  line-height: 1.15; margin: 0 0 0.4rem;
+}
+.card-text { font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.4rem; }
+.card-text strong { color: var(--ink); }
+.card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.card-actions .store-btn { margin-top: 0; }
+.cards-note { margin: 2rem 0 0; max-width: none; }
+.section-dark .cards-note { color: var(--moon-text); }
+.group-title {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 1.95rem); line-height: 1.15;
+  margin: 3.2rem 0 1.4rem;
+}
+.group-title:first-of-type { margin-top: 0.5rem; }
+
+/* Lists inside resource sections */
+.checklist {
+  list-style: none; margin: 0 0 2rem; padding: 0; max-width: 36rem;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.45rem 1.5rem;
+}
+.checklist li { position: relative; padding-left: 1.6rem; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0.1rem; top: 0.55em;
+  width: 0.7rem; height: 0.38rem;
+  border-left: 2px solid var(--gold); border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+}
+.section-dark .checklist { color: var(--moon-text); }
+.plain-list { margin: 0 0 1.15rem; padding-left: 1.2rem; max-width: 42rem; }
+.plain-list li { margin-bottom: 0.45rem; }
+.plain-list li::marker { color: var(--gold); }
+.section-dark .plain-list { color: var(--moon-text); }
+.isbn { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.faq h3 {
+  font-family: var(--display); font-size: clamp(1.3rem, 2.4vw, 1.55rem);
+  font-weight: 700; line-height: 1.2; margin: 2.1rem 0 0.4rem;
+}
+.faq h3:first-of-type { margin-top: 0.5rem; }
+
+/* Chapter One player embedded on the Educators page */
+.class-audio { max-width: 34rem; margin: 0 0 1.8rem; }
+.class-audio audio { display: block; width: 100%; }
+
+/* Ordering table (stacks into cards on phones) */
+.order-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  background: var(--paper); border-radius: var(--radius);
+  box-shadow: var(--shadow-md); overflow: hidden;
+  font-size: 0.93rem; line-height: 1.5; margin: 0 0 2.6rem;
+}
+.order-table th, .order-table td {
+  text-align: left; vertical-align: top;
+  padding: 0.95rem 1rem; border-bottom: 1px solid #E6E2D8;
+}
+.order-table thead th {
+  background: var(--ink); color: var(--gold);
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.order-table tbody th { font-weight: 800; color: var(--ink); }
+.order-table tbody tr:last-child > * { border-bottom: 0; }
+
+@media (max-width: 940px) {
+  .order-table, .order-table tbody, .order-table tr, .order-table th, .order-table td { display: block; width: 100%; }
+  .order-table { background: none; box-shadow: none; border-radius: 0; overflow: visible; }
+  .order-table thead {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+  .order-table tbody tr {
+    background: var(--paper); border-radius: var(--radius);
+    box-shadow: var(--shadow-md); margin: 0 0 1rem; overflow: hidden;
+  }
+  .order-table tbody th { background: var(--ink); color: var(--paper); font-family: var(--display); font-size: 1.25rem; }
+  .order-table td { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.75rem; padding: 0.7rem 1rem; }
+  .order-table td::before {
+    content: attr(data-label);
+    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #9A6A2C; padding-top: 0.2rem;
+  }
+  .order-table td:empty { display: none; }
+}
+
+@media (max-width: 760px) {
+  .store-grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .checklist { grid-template-columns: 1fr; }
+  .order-table td { grid-template-columns: 1fr; gap: 0.1rem; }
 }

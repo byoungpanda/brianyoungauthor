@@ -16,7 +16,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 
   <!-- Meta Pixel -->
   <script>
@@ -31,7 +31,7 @@
   fbq('init', '1885360009141177');
   fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
+  <noscript><img height="1" width="1" alt="" style="display:none"
   src="https://www.facebook.com/tr?id=1885360009141177&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel -->
@@ -51,6 +51,15 @@
       <li><a href="sophia-sprite.html">Sophia Sprite</a></li>
       <li><a href="sacred-vein.html">The Sacred Vein</a></li>
       <li><a href="store.html">Store</a></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-resources">Resources<svg viewBox="0 0 10 6" aria-hidden="true" focusable="false"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <span class="nav-sub-label" aria-hidden="true">Resources</span>
+        <ul class="nav-sub" id="nav-resources" aria-label="Resources">
+          <li><a href="educators.html">For Educators</a></li>
+          <li><a href="librarians.html">For Librarians</a></li>
+          <li><a href="book-clubs.html">Book Clubs</a></li>
+        </ul>
+      </li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
       <li><a class="nav-cta" href="index.html#newsletter">Newsletter</a></li>
@@ -133,7 +142,7 @@
           <div class="cover-fan">
             <img src="sacred-vein.jpg" alt="Cover of The Sacred Vein" loading="lazy">
             <img src="shadow-archive.jpg" alt="Cover of The Shadow Archive" loading="lazy">
-            <img src="hidden-network.jpg" alt="Cover of The Hidden Network" loading="lazy">
+            <img src="hidden-network.jpg?v=2" alt="Cover of The Hidden Network" loading="lazy">
           </div>
         </div>
         <div>
@@ -157,6 +166,7 @@
           <p class="series-kicker k-rose">Children's &middot; Read-aloud favorite</p>
           <h3>The Adventures of Pinky Whiskers<br>and Sharp Nose</h3>
           <p>Two mice who can never seem to stay out of trouble. Sharp Nose is the adventure-loving big sister, Pinky Whiskers her good-hearted baby brother, and together they're on a journey from home to home in search of a place to call their own.</p>
+          <p>Free for teachers and families: the <a class="text-link" href="/downloads/Pinky_Whiskers_Classroom_Guide.pdf" target="_blank" rel="noopener">Classroom Guide</a> (PDF, 14 pages) and the <a class="text-link" href="/downloads/Pinky_Whiskers_Reading_Club_Kit.pdf" target="_blank" rel="noopener">Reading Club Kit</a> (PDF, 12 pages).</p>
           <div class="series-actions">
             <a class="btn btn-rose" href="https://www.amazon.com/dp/B07Z2KB7S8" target="_blank" rel="noopener">Buy on Amazon</a>
           </div>
@@ -164,6 +174,42 @@
       </div>
 
       <p class="prose shelf-note">Want a paperback straight from the author? <a class="text-link" href="store.html">Visit the store</a>, or find every title on <a class="text-link" href="https://www.amazon.com/stores/Brian-Young/author/B07YLYB354" target="_blank" rel="noopener">Brian's Amazon author page</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ RESOURCES ============ -->
+  <section class="section section-light" id="resources" style="padding-top: 0;">
+    <div class="wrap" style="border-top: 1px solid #DEDACF; padding-top: 4.5rem;">
+      <p class="eyebrow eyebrow-dark">Resources</p>
+      <h2 class="section-title">Free guides for teachers, librarians, and book clubs</h2>
+      <p class="section-lede">Every guide is a free PDF to print and share. No signup.</p>
+
+      <div class="store-grid">
+        <article class="store-card">
+          <div class="store-body">
+            <p class="series-kicker k-forest">Teachers</p>
+            <h3>For Educators</h3>
+            <p class="card-text">Discussion guides, lesson plans, and a read-aloud guide for grades K to 9, plus free virtual classroom visits.</p>
+            <a class="btn btn-forest store-btn" href="educators.html">See the guides</a>
+          </div>
+        </article>
+        <article class="store-card">
+          <div class="store-body">
+            <p class="series-kicker k-canyon">Libraries</p>
+            <h3>For Librarians</h3>
+            <p class="card-text">ISBNs and ordering details, library ebook availability, program kits, and free virtual visits, all on one page.</p>
+            <a class="btn btn-canyon store-btn" href="librarians.html">Ordering and kits</a>
+          </div>
+        </article>
+        <article class="store-card">
+          <div class="store-body">
+            <p class="series-kicker k-rose">Reading groups</p>
+            <h3>Book Clubs</h3>
+            <p class="card-text">A free kit for every book, with reading plans, discussion questions, and a letter from Brian.</p>
+            <a class="btn btn-rose store-btn" href="book-clubs.html">Get a kit</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -199,7 +245,7 @@
           </div>
         </li>
       </ul>
-      <p class="prose event-note">Want Brian at your school, library, store, or festival? <a class="text-link" href="#contact">Send a request.</a></p>
+      <p class="prose event-note">Want Brian at your <a class="text-link" href="educators.html#visits">school</a>, <a class="text-link" href="librarians.html#visits">library</a>, store, or festival? <a class="text-link" href="#contact">Send a request.</a></p>
     </div>
   </section>
 
@@ -259,11 +305,12 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <p>&copy; <span id="year">2026</span> Brian Young. All rights reserved.</p>
+    <nav class="footer-links" aria-label="Resources"><a href="educators.html">For Educators</a><a href="librarians.html">For Librarians</a><a href="book-clubs.html">Book Clubs</a></nav>
     <p><a href="mailto:hello@brianyoungauthor.com">hello@brianyoungauthor.com</a></p>
     <p><a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
