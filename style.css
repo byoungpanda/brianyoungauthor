@@ -925,3 +925,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .checklist { grid-template-columns: 1fr; }
   .order-table td { grid-template-columns: 1fr; gap: 0.1rem; }
 }
+
+/* Press kit fact sheets */
+.press-facts {
+  list-style: none; margin: 0 0 1.6rem; padding: 0; max-width: 42rem;
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+.press-facts .fact-key { margin-right: 0.55rem; }
+.section-dark .press-facts { color: var(--moon-text); }
