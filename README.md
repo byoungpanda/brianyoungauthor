@@ -13,6 +13,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | educators.html | For Educators: classroom guides, lesson plans, Chapter 1 audio, school visits, ordering, FAQ |
 | librarians.html | For Librarians: ISBN and format table, ordering, program kits, visits, review copies |
 | book-clubs.html | Book Clubs: kits for kids and adult clubs, club visits, newsletter |
+| press.html | Press Kit: short and long bios, author photo, book fact sheets with full-size covers, review copies |
 | downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive) |
 | sitemap.xml, robots.txt | Public pages and guide PDFs for search engines (the unlisted newsletter pages stay out on purpose) |
 | thanks.html | Shown after someone sends a message or signs up |
