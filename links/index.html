@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brian Young, Author</title>
+<!-- TikTok bio landing page. Not in the menus, footer or sitemap; kept out of search like the other unlisted pages. -->
+<meta name="robots" content="noindex">
+<meta name="description" content="Audiobook, ebook, free first chapter, and newsletter for the Sophia Sprite series by Brian Young.">
+<meta property="og:title" content="Brian Young, Author">
+<meta property="og:description" content="Audiobook, ebook, free first chapter, and newsletter for the Sophia Sprite series by Brian Young.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brianyoungauthor.com/links/">
+<!-- Social share image: swap this too when the featured cover changes -->
+<meta property="og:image" content="https://brianyoungauthor.com/sasquatch-secret-audiobook.jpg?v=2">
+<meta property="og:image:alt" content="Sophia Sprite and the Sasquatch Secret audiobook cover">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#10161F">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Site fonts, loaded without blocking the first paint -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700;6..12,800&display=swap"></noscript>
+<style>
+  :root {
+    --ink: #10161F;
+    --gold: #E4B454;
+    --gold-soft: #F1D291;
+    --paper: #FFFFFF;
+    --moon-text: #C9D2E4;
+    --muted: #A9B6CE;
+    --line: rgba(255, 255, 255, 0.14);
+    --display: "Cormorant Garamond", Georgia, serif;
+    --body: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0; min-height: 100vh;
+    font: 400 17px/1.5 var(--body); color: var(--moon-text);
+    background-color: var(--ink);
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 6%, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1px 1px at 84% 4%, rgba(255,255,255,0.6), transparent),
+      radial-gradient(2px 2px at 70% 12%, rgba(241,210,145,0.8), transparent),
+      radial-gradient(1px 1px at 26% 18%, rgba(255,255,255,0.5), transparent),
+      radial-gradient(520px 360px at 50% 0%, rgba(241,210,145,0.12), transparent 70%),
+      radial-gradient(700px 500px at 50% 100%, rgba(76,138,95,0.18), transparent 70%),
+      linear-gradient(180deg, #0C121B 0%, #131C29 60%, #142031 100%);
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 460px; margin: 0 auto; padding: 20px 16px 40px; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+
+  /* Featured block. The cover keeps a fixed height, so square and tall covers both fit
+     and the button stays above the fold. */
+  .featured { text-align: center; }
+  .featured-cover {
+    display: block; margin: 0 auto 18px;
+    height: min(310px, 38vh); width: auto; max-width: 100%;
+    border-radius: 10px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    background: #1A2230;
+  }
+  .featured h1 {
+    font: 700 clamp(30px, 8.6vw, 38px)/1.08 var(--display);
+    color: var(--paper); margin: 0 0 10px; letter-spacing: 0.005em;
+  }
+  .featured-sub { margin: 0 0 18px; }
+
+  /* Buttons: plain links styled as big tap targets */
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; min-height: 56px; padding: 14px 20px;
+    border-radius: 14px; border: 1.5px solid rgba(255, 255, 255, 0.32);
+    background: rgba(255, 255, 255, 0.06); color: var(--paper);
+    font: 800 18px/1.25 var(--body); text-align: center; text-decoration: none;
+    -webkit-tap-highlight-color: transparent; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--gold); }
+  .btn:active { transform: translateY(1px); }
+  .btn-primary {
+    min-height: 62px; font-size: 20px;
+    background: var(--gold); border-color: var(--gold); color: var(--ink);
+    box-shadow: 0 10px 28px rgba(228, 180, 84, 0.32);
+  }
+  .btn-primary:hover { background: var(--gold-soft); border-color: var(--gold-soft); }
+  .btn svg { width: 16px; height: 16px; flex: none; fill: var(--gold); }
+  .note { margin: 8px 0 0; font-size: 16px; color: var(--muted); text-align: center; }
+  .featured-sub, .note, .signup-lede { text-wrap: balance; }
+
+  .stack { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .stack .btn + .note { margin-bottom: 18px; }
+  .stack .note:last-child { margin-bottom: 0; }
+
+  /* Newsletter */
+  .signup-title {
+    font: 700 28px/1.15 var(--display); color: var(--paper);
+    text-align: center; margin: 0 0 6px;
+  }
+  .signup-lede { text-align: center; margin: 0 0 16px; }
+  .signup input[type="email"] {
+    display: block; width: 100%; min-height: 56px; margin: 0 0 10px; padding: 12px 16px;
+    border-radius: 14px; border: 1.5px solid rgba(255, 255, 255, 0.32);
+    background: #0B1017; color: var(--paper); font: 400 18px/1.3 var(--body);
+  }
+  .signup input[type="email"]::placeholder { color: #8391AB; }
+  .signup input[type="email"]:focus { border-color: var(--gold); outline: none; }
+  .signup button { appearance: none; -webkit-appearance: none; }
+  .joined {
+    display: none; margin: 0 0 14px; padding: 14px 16px; border-radius: 14px;
+    background: rgba(76, 138, 95, 0.22); border: 1.5px solid #4C8A5F;
+    color: var(--paper); font-weight: 700; text-align: center;
+  }
+  .joined:target { display: block; }
+  .joined:target ~ .signup { display: none; }
+
+  /* Also by Brian Young (hidden until a second book goes in) */
+  .also-title, .more-title {
+    font: 800 16px/1.3 var(--body); letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold); text-align: center; margin: 0 0 14px;
+  }
+  .also-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .also-list a {
+    display: flex; align-items: center; gap: 14px; min-height: 56px; padding: 10px 14px;
+    border-radius: 14px; border: 1.5px solid var(--line); text-decoration: none; color: var(--paper);
+  }
+  .also-list a:hover { border-color: var(--gold); }
+  .also-list img { width: 48px; height: auto; border-radius: 4px; flex: none; }
+  .also-list strong { display: block; font-size: 17px; line-height: 1.3; }
+  .also-list span { display: block; font-size: 16px; color: var(--muted); }
+
+  /* More from Brian */
+  .icons {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  }
+  .icons a {
+    display: flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.24); color: var(--moon-text);
+  }
+  .icons a:hover { color: var(--gold); border-color: var(--gold); }
+  .icons svg { width: 22px; height: 22px; fill: currentColor; }
+</style>
+</head>
+<body>
+<main>
+
+  <!-- ================= FEATURED BLOCK: START =================
+       To swap campaigns, change only the five EDIT lines below.
+       The layout adjusts on its own, square or tall cover.
+       Covers already on the site:
+         audiobook  /sasquatch-secret-audiobook.jpg?v=2
+         ebook      /sasquatch-secret.jpg?v=3
+       Also update og:image near the top of this file so link previews match. -->
+  <section class="featured" aria-labelledby="featured-title">
+    <!-- EDIT 1: cover image (src) and its description (alt) -->
+    <img class="featured-cover" src="/sasquatch-secret-audiobook.jpg?v=2" alt="Sophia Sprite and the Sasquatch Secret audiobook cover" width="480" height="480" fetchpriority="high">
+    <!-- EDIT 2: headline -->
+    <h1 id="featured-title">The audiobook is out now</h1>
+    <!-- EDIT 3: subhead -->
+    <p class="featured-sub">Sophia Sprite and the Sasquatch Secret, read by Audie Award winner Bahni Turpin. Nine and a half hours of Percy Jackson meets Bigfoot.</p>
+    <!-- EDIT 4: button link (href) and button text -->
+    <a class="btn btn-primary" href="https://www.audible.com/pd/B0HMXW7RHY/?source_code=AUDFPWS0223189MWT-BK-ACX0-537472&ref=acx_bty_BK_ACX0_537472_rh_us" aria-describedby="featured-note">Listen on Audible</a>
+    <!-- EDIT 5: small line under the button -->
+    <p class="note" id="featured-note">Free with a new Audible trial</p>
+  </section>
+  <!-- ================= FEATURED BLOCK: END ================= -->
+
+  <section class="stack" aria-labelledby="try-title">
+    <h2 class="visually-hidden" id="try-title">Try before you buy</h2>
+    <a class="btn" href="https://brianyoungauthor.com/listen-chapter-one-v9t4pz/" aria-describedby="try-note"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2.5v11l9-5.5z"/></svg>Hear Chapter 1 free</a>
+    <p class="note" id="try-note">Fifteen minutes. Meet Sophia.</p>
+  </section>
+
+  <section class="stack" aria-labelledby="book-title">
+    <h2 class="visually-hidden" id="book-title">Get the book</h2>
+    <a class="btn" href="https://books2read.com/SophiaSprite1" aria-describedby="ebook-note">Preorder the ebook, $4.99</a>
+    <p class="note" id="ebook-note">Out November 23. Price goes up after launch week.</p>
+    <a class="btn" href="https://books2read.com/SophiaSprite1">Paperback and hardcover</a>
+  </section>
+
+  <section class="stack" aria-labelledby="signup-title">
+    <h2 class="signup-title" id="signup-title">Get the next one first</h2>
+    <p class="signup-lede">Release news and the occasional deleted scene. Unsubscribe anytime.</p>
+    <p class="joined" id="joined" role="status">You're on the list. Thanks.</p>
+    <!-- Same signup as the rest of the site. After signing up, people land back here with the thank-you line showing. -->
+    <form class="signup" action="https://formsubmit.co/hello@brianyoungauthor.com" method="POST">
+      <input type="hidden" name="_subject" value="New newsletter signup (TikTok links page)">
+      <input type="hidden" name="_next" value="https://brianyoungauthor.com/links/#joined">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="visually-hidden" for="signup-email">Email address</label>
+      <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" inputmode="email">
+      <button class="btn" type="submit">Join the list</button>
+      <p class="note">For readers under 13: please ask a parent or guardian to sign up for you.</p>
+    </form>
+  </section>
+
+  <!-- ================= ALSO BY BRIAN YOUNG =================
+       Hidden until there is a book to show. To add one: delete the word hidden
+       from the section tag below, then copy the sample <li> out of its comment
+       and fill in the link, cover, title and one line. -->
+  <section class="stack" aria-labelledby="also-title" hidden>
+    <h2 class="also-title" id="also-title">Also by Brian Young</h2>
+    <ul class="also-list">
+      <!--
+      <li><a href="https://books2read.com/LINK"><img src="/banshee-bargain.jpg" alt="" width="48" height="77"><span><strong>Sophia Sprite and the Banshee Bargain</strong><span>Book Two. Out 2027.</span></span></a></li>
+      -->
+    </ul>
+  </section>
+
+  <section class="stack" aria-labelledby="more-title">
+    <h2 class="more-title" id="more-title">More from Brian</h2>
+    <ul class="icons">
+      <li><a href="https://www.tiktok.com/@brianyoungauthor" aria-label="Brian Young on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+      <!-- Facebook, Threads, Bluesky and X are ready to go. Paste the profile link
+           over PASTE-LINK-HERE and delete the comment marks around that line.
+      <li><a href="PASTE-LINK-HERE" aria-label="Brian Young on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a></li>
+      <li><a href="PASTE-LINK-HERE" aria-label="Brian Young on Threads"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a></li>
+      <li><a href="PASTE-LINK-HERE" aria-label="Brian Young on Bluesky"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z"/></svg></a></li>
+      <li><a href="PASTE-LINK-HERE" aria-label="Brian Young on X"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a></li>
+      -->
+      <li><a href="https://brianyoungauthor.com/" aria-label="brianyoungauthor.com home page"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.6 1.6 11.2l1.3 1.6L4.5 11.5V21a1 1 0 0 0 1 1h5v-6.5h3V22h5a1 1 0 0 0 1-1v-9.5l1.6 1.3 1.3-1.6L12 2.6Zm5.5 17.4h-2v-6.5h-7V20h-2V9.9L12 4.9l5.5 5Z"/></svg></a></li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
