@@ -167,7 +167,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .eyebrow {
-  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.26em;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--gold); margin: 0 0 1rem;
   display: flex; align-items: center; gap: 0.75rem;
 }
@@ -190,12 +190,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-sub em { color: var(--gold-soft); }
 
 /* Countdown */
-.countdown { margin-bottom: 2.2rem; }
+.countdown { margin: 2.2rem 0 0; }
 .countdown-label {
   margin: 0 0 0.7rem; font-weight: 800; font-size: 0.85rem;
   letter-spacing: 0.14em; text-transform: uppercase; color: #93A3C0;
 }
 .countdown-grid { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.countdown-actions {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 0.75rem 1.2rem; margin-top: 1rem;
+}
 .countdown-cell {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(228, 180, 84, 0.35);
@@ -209,7 +213,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   line-height: 1.05; font-variant-numeric: tabular-nums;
 }
 .countdown-unit {
-  font-size: 0.7rem; letter-spacing: 0.16em;
+  font-size: 0.75rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: #93A3C0;
 }
 
@@ -230,6 +234,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .btn-ink { background: var(--ink); color: var(--paper); border: 0; }
 .btn-ink:hover { background: var(--ink-3); }
 .btn-wide { padding-inline: 2.6rem; }
+.btn-sm { padding: 0.6rem 1.25rem; font-size: 0.92rem; }
+
+.hero-note { margin: 0.9rem 0 0; font-size: 0.95rem; color: var(--moon-text); }
+.hero-link {
+  color: var(--gold-soft); font-weight: 700; font-size: 0.95rem;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.hero-link:hover { color: var(--gold); }
+
+.hero-cover {
+  display: block; width: 310px; max-width: 100%; height: auto;
+  border-radius: 6px 14px 14px 6px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+  transform: rotate(2deg);
+}
 
 /* 3D book (CSS stand-in for the new cover) */
 .hero-book { display: flex; justify-content: center; perspective: 1300px; }
@@ -360,7 +379,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .series-row-rev .series-art { order: 2; }
 
 .series-kicker {
-  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.2em;
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 0.16em;
   text-transform: uppercase; margin: 0 0 0.5rem;
 }
 .k-forest { color: var(--forest); }
@@ -474,8 +493,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: rgba(228, 180, 84, 0.55); line-height: 1;
 }
 .roadmap-slot .rl {
-  font-size: 0.68rem; font-weight: 800;
-  letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: 0.75rem; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
 }
 
 /* ---------- Store ---------- */
@@ -549,7 +568,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 12px; padding: 0.45rem 0 0.6rem;
 }
 .event-month {
-  display: block; font-size: 0.7rem; letter-spacing: 0.2em;
+  display: block; font-size: 0.76rem; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--gold); font-weight: 800;
 }
 .event-day {
@@ -582,7 +601,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items: baseline; flex-wrap: wrap;
 }
 .fact-key {
-  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em;
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--gold);
 }
 .section-light .fact-key { color: #9A6A2C; }
@@ -631,6 +650,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .site-footer a { color: var(--moon-text); text-decoration: none; }
 .site-footer a:hover { color: var(--gold); }
 
+.footer-social-row {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 0.75rem 1.25rem; padding-top: 2rem; padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.footer-follow {
+  margin: 0; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #93A3C0;
+}
+.footer-social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; }
+.footer-social a {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(228, 180, 84, 0.35); color: var(--moon-text);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.footer-social a:hover, .footer-social a:focus-visible { color: var(--gold); border-color: var(--gold); background: rgba(228, 180, 84, 0.08); }
+.footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+
 /* ---------- Chapter One listen card (home + Sophia Sprite heroes) ---------- */
 
 .listen-cta {
@@ -660,8 +697,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .listen-cta:hover .listen-cta-play { transform: scale(1.08); background: var(--gold-soft); }
 .listen-cta-body { flex: 1 1 auto; min-width: 0; }
 .listen-cta-kicker {
-  margin: 0 0 0.15rem; font-size: 0.72rem; font-weight: 800;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold);
+  margin: 0 0 0.15rem; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
 }
 .listen-cta-title {
   margin: 0 0 0.25rem; font-family: var(--display); font-weight: 700;
@@ -720,7 +757,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media (max-width: 940px) {
   .hero-inner { grid-template-columns: 1fr; padding-top: 3.5rem; padding-bottom: 10rem; }
-  .hero-book { order: -1; }
+  .hero-cover { width: 220px; }
   .book { width: 196px; height: 294px; }
   .book-title { font-size: 1.45rem; }
   .book-emblem { width: 58px; height: 58px; }
@@ -737,6 +774,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .book-entry .series-actions { justify-content: center; }
   .roadmap { grid-template-columns: repeat(2, 1fr); }
   .store-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  /* Keep the moon clear of the eyebrow now that the copy leads on phones */
+  .hero::before { width: 40px; height: 40px; top: 8px; right: 5%; }
+  .countdown-label { letter-spacing: 0.08em; }
+  .page-hero .eyebrow::before, .page-hero .eyebrow::after { display: none; }
 }
 
 @media (max-width: 900px) {
@@ -814,7 +858,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .nav-dropdown-toggle { display: none; }
   .nav-sub-label {
     display: block; padding: 0.85rem 1.25rem 0.2rem;
-    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.18em;
+    font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em;
     text-transform: uppercase; color: #93A3C0;
   }
   .nav-sub {
@@ -892,7 +936,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .order-table thead th {
   background: var(--ink); color: var(--gold);
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 0.76rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
 }
 .order-table tbody th { font-weight: 800; color: var(--ink); }
 .order-table tbody tr:last-child > * { border-bottom: 0; }
@@ -912,7 +956,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .order-table td { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.75rem; padding: 0.7rem 1rem; }
   .order-table td::before {
     content: attr(data-label);
-    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em;
+    font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em;
     text-transform: uppercase; color: #9A6A2C; padding-top: 0.2rem;
   }
   .order-table td:empty { display: none; }
@@ -924,6 +968,29 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 600px) {
   .checklist { grid-template-columns: 1fr; }
   .order-table td { grid-template-columns: 1fr; gap: 0.1rem; }
+}
+
+/* Format cards (Sophia Sprite page, "Get the book") */
+.format-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.2rem; }
+.format-card h3 { font-family: var(--display); font-size: 1.55rem; line-height: 1.15; margin: 0 0 0.4rem; color: var(--ink); }
+.format-card .card-text { margin-bottom: 1.2rem; }
+.format-card .store-btn { margin-top: 0; }
+@media (min-width: 1101px) {
+  /* Four across: give the blurbs equal height so the buttons line up */
+  .format-card .card-text { min-height: 6.4em; }
+}
+.format-note { margin: 0.7rem 0 0; font-size: 0.86rem; line-height: 1.45; color: var(--slate-soft); }
+.buy-links {
+  list-style: none; margin: 0.9rem 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem;
+}
+.isbn { white-space: nowrap; }
+@media (max-width: 1100px) {
+  .format-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .format-grid { grid-template-columns: 1fr; }
+  .format-card { max-width: 360px; margin: 0 auto; width: 100%; }
 }
 
 /* Press kit fact sheets */
