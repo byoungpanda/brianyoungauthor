@@ -23,23 +23,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css?v=7">
 
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1885360009141177');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" alt="" style="display:none"
-  src="https://www.facebook.com/tr?id=1885360009141177&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel -->
 
   <style>
     /* Page-specific styles for /preorder */
@@ -164,6 +147,7 @@
       .audio-body { width: 100%; }
     }
   </style>
+  <script src="/track.js?v=1" defer></script>
 </head>
 <body>
 
@@ -316,7 +300,7 @@
   </div>
   <div class="wrap footer-inner">
     <p>&copy; <span id="year">2026</span> Brian Young. All rights reserved.</p>
-    <nav class="footer-links" aria-label="Resources"><a href="/educators.html">For Educators</a><a href="/librarians.html">For Librarians</a><a href="/book-clubs.html">Book Clubs</a><a href="/press.html">Press Kit</a></nav>
+    <nav class="footer-links" aria-label="Resources"><a href="/educators.html">For Educators</a><a href="/librarians.html">For Librarians</a><a href="/book-clubs.html">Book Clubs</a><a href="/press.html">Press Kit</a><a href="/privacy.html">Privacy</a></nav>
     <p><a href="mailto:hello@brianyoungauthor.com">hello@brianyoungauthor.com</a></p>
     <p><a href="/index.html">← Back home</a></p>
   </div>
@@ -332,12 +316,6 @@
   fetch("/audio/sasquatch-sample.mp3", { method: "HEAD" })
     .then(function (r) { if (r.ok) listen.removeAttribute("hidden"); })
     .catch(function () { /* keep hidden */ });
-
-  /* Track preorder button clicks */
-  var btn = document.getElementById("preorder-btn");
-  if (btn) btn.addEventListener("click", function () {
-    if (window.fbq) fbq("track", "InitiateCheckout", { content_name: "Sasquatch Secret ebook preorder" });
-  });
 
   /* Claim form: AJAX submit so the confirmation shows on-page */
   var form = document.getElementById("claim-form");
@@ -374,7 +352,7 @@
       form.style.display = "none";
       confirmBox.classList.add("is-shown");
       confirmBox.scrollIntoView({ behavior: "smooth", block: "center" });
-      if (window.fbq) fbq("track", "Lead", { content_name: "Field Guide claim" });
+      if (window.siteTrack) siteTrack("Lead", { content_name: "Field Guide claim" });
     }).catch(function () {
       errBox.classList.add("is-shown");
       submitBtn.disabled = false;

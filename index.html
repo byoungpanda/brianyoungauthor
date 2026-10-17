@@ -23,23 +23,6 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="style.css?v=7">
 
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1885360009141177');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" alt="" style="display:none"
-  src="https://www.facebook.com/tr?id=1885360009141177&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,6 +45,7 @@
   ]
 }
   </script>
+  <script src="/track.js?v=1" defer></script>
 </head>
 <body>
 
@@ -298,7 +282,7 @@
       <p class="section-lede">Release news, first chapters, future cover reveals, and the occasional deleted scene. No spam, ever. Unsubscribe anytime.</p>
       <form class="signup" action="https://formsubmit.co/hello@brianyoungauthor.com" method="POST">
         <input type="hidden" name="_subject" value="New newsletter signup!">
-        <input type="hidden" name="_next" value="https://brianyoungauthor.com/thanks.html">
+        <input type="hidden" name="_next" value="https://brianyoungauthor.com/thanks.html?signup=newsletter">
         <input type="hidden" name="_captcha" value="true">
         <input type="text" name="_honey" style="display:none">
         <label class="visually-hidden" for="email">Email address</label>
@@ -321,7 +305,7 @@
       </ul>
       <form class="contact-form" action="https://formsubmit.co/hello@brianyoungauthor.com" method="POST">
         <input type="hidden" name="_subject" value="Message from brianyoungauthor.com">
-        <input type="hidden" name="_next" value="https://brianyoungauthor.com/thanks.html">
+        <input type="hidden" name="_next" value="https://brianyoungauthor.com/thanks.html?sent=contact">
         <input type="hidden" name="_captcha" value="true">
         <input type="text" name="_honey" style="display:none">
         <div class="form-row">
@@ -359,7 +343,7 @@
   </div>
   <div class="wrap footer-inner">
     <p>&copy; <span id="year">2026</span> Brian Young. All rights reserved.</p>
-    <nav class="footer-links" aria-label="Resources"><a href="educators.html">For Educators</a><a href="librarians.html">For Librarians</a><a href="book-clubs.html">Book Clubs</a><a href="press.html">Press Kit</a></nav>
+    <nav class="footer-links" aria-label="Resources"><a href="educators.html">For Educators</a><a href="librarians.html">For Librarians</a><a href="book-clubs.html">Book Clubs</a><a href="press.html">Press Kit</a><a href="privacy.html">Privacy</a></nav>
     <p><a href="mailto:hello@brianyoungauthor.com">hello@brianyoungauthor.com</a></p>
     <p><a href="#top">Back to top ↑</a></p>
   </div>
