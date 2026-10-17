@@ -18,7 +18,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | audiobook/index.html | Public audiobook page at /audiobook/ (in search): Audible button, Chapter One player, narrator facts |
 | 404.html | Shown by GitHub Pages for any missing URL; every link in it is absolute |
 | share/ | 1200x630 social share images: out-now.jpg (home, Sophia Sprite, store, preorder, first chapters), audiobook.jpg (audiobook and Chapter One pages), press.jpg (press kit and releases) |
-| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive) |
+| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive), plus the press-kit cover files: Sophia_Sprite_Cover_1800x2880.jpg (300 dpi front cover) and Sophia_Sprite_Audiobook_Cover_3000px.jpg |
 | sitemap.xml, robots.txt | Public pages and guide PDFs for search engines (the unlisted newsletter pages stay out on purpose) |
 | thanks.html | Shown after someone sends a message or signs up |
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
