@@ -93,7 +93,9 @@
     if (/^https:\/\/www\.audible\.com\//.test(href)) {
       send("ListenOnAudible", { content_name: "Sasquatch Secret audiobook", link_text: label });
     } else if (/^https:\/\/books2read\.com\/SophiaSprite1/.test(href)) {
-      send("PreorderEbook", { content_name: "Sasquatch Secret ebook preorder", link_text: label });
+      /* The same Books2Read link also serves as "Paperback and hardcover" and "More stores" for print */
+      if (/paperback|hardcover|more stores/i.test(label)) send("BuyPrint", { content_name: "Sasquatch Secret print", link_text: label });
+      else send("PreorderEbook", { content_name: "Sasquatch Secret ebook preorder", link_text: label });
     } else if (/amazon\.com\/dp\/1734179414|barnesandnoble\.com\/w\/sophia-sprite|shop\.ingramspark\.com\//.test(href)) {
       send("BuyPrint", { content_name: "Sasquatch Secret print", link_text: label });
     }
