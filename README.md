@@ -24,6 +24,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
 | style.css | All styling (pages link it as style.css?v=8; bump the number on every page after any change) |
 | script.js | Ebook countdown, mobile menu, Resources dropdown, scroll animations (linked as script.js?v=4) |
+| signup.js | Sends the newsletter signup boxes to Brevo in the background, then opens the thank-you page (linked as /signup.js?v=1 on the 7 pages with a signup box) |
 | track.js | Meta Pixel plus empty slots for a TikTok pixel and Google Analytics 4, and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
 | privacy.html | Privacy page: forms, Meta Pixel, Google Fonts, hosting, Audible referral note, readers under 13 |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
@@ -31,13 +32,13 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 
 ## Hosting (already done)
 
-GitHub Pages deploys from the main branch root. Custom domain brianyoungauthor.com is configured via GoDaddy A records (185.199.108-111.153) and a www CNAME to byoungpanda.github.io, with HTTPS enforced in Settings → Pages.
+GitHub Pages deploys from the main branch root. Custom domain brianyoungauthor.com: GoDaddy is the registrar, but DNS is hosted on **Cloudflare** (nameservers marlowe and fred.ns.cloudflare.com), so add or change DNS records in Cloudflare, not GoDaddy. The A records point at GitHub Pages (185.199.108-111.153), www is a CNAME to byoungpanda.github.io, and HTTPS is enforced in Settings → Pages.
 
 ## Forms (one-time activation!)
 
-The contact form and newsletter signups deliver to **hello@brianyoungauthor.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. Easiest: submit the contact form yourself. Both forms have CAPTCHA + honeypot spam protection and redirect to thanks.html (newsletter forms add `?signup=newsletter`, the contact form adds `?sent=contact`, so the page shows the right message and the signup is counted).
+Newsletter signup boxes post to Brian's Brevo form "Website signup" (list #4 Newsletter, double opt-in): the form `action` is that form's sibforms.com URL, the email field is named `EMAIL`, and `email_address_check` is Brevo's honeypot. signup.js posts in the background and sends readers to thanks.html?signup=newsletter ("check your inbox"), or /links/#joined on the links page; without JavaScript the browser posts straight to Brevo. thanks.html?signup=confirmed is the page to use as the redirect after the confirmation link. To change the list or fields, edit the form in Brevo; the URL stays the same.
 
-When the newsletter list grows, graduate to MailerLite or Buttondown (free tiers) for automated sends and unsubscribe handling — swap the form action URL or paste in their embed code.
+The contact form and the preorder drawing form deliver to **hello@brianyoungauthor.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. The contact form has CAPTCHA + honeypot spam protection and redirects to thanks.html?sent=contact, so the page shows the right message and the message is counted.
 
 ## Remaining updates
 
