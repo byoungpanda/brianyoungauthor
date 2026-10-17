@@ -13,21 +13,21 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | educators.html | For Educators: classroom guides, lesson plans, Chapter 1 audio, school visits, ordering, FAQ |
 | librarians.html | For Librarians: ISBN and format table, ordering, program kits, visits, review copies |
 | book-clubs.html | Book Clubs: kits for kids and adult clubs, club visits, newsletter |
-| press.html | Press Kit: press releases, at a glance, story angles, short and long bios, author photo, book fact sheets with full-size covers, review copies |
+| press.html | Press Kit: press releases, at a glance, story angles, short and long bios, two downloadable author photos, book fact sheets with full-size covers, review copies |
 | releases/ | Press releases as web pages plus matching PDFs. The PDFs are printed from the pages (print styles are inside each page), so edit the page and re-print rather than editing a PDF |
 | audiobook/index.html | Public audiobook page at /audiobook/ (in search): Audible button, Chapter One player, narrator facts |
 | 404.html | Shown by GitHub Pages for any missing URL; every link in it is absolute |
 | share/ | 1200x630 social share images: out-now.jpg (home, Sophia Sprite, store, preorder, first chapters), audiobook.jpg (audiobook and Chapter One pages), press.jpg (press kit and releases) |
-| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive), plus the press-kit cover files: Sophia_Sprite_Cover_1800x2880.jpg (300 dpi front cover) and Sophia_Sprite_Audiobook_Cover_3000px.jpg |
+| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive), plus the press-kit cover files: Sophia_Sprite_Cover_1800x2880.jpg (300 dpi front cover) and Sophia_Sprite_Audiobook_Cover_3000px.jpg, and the full-size author photos Brian_Young_Author_Photo_1.jpg (2544x3392, the main one) and Brian_Young_Author_Photo_2.jpg (2208x2944) |
 | sitemap.xml, robots.txt | Public pages and guide PDFs for search engines (the unlisted newsletter pages stay out on purpose) |
 | thanks.html | Shown after someone sends a message or signs up |
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
-| style.css | All styling (pages link it as style.css?v=7; bump the number on every page after any change) |
+| style.css | All styling (pages link it as style.css?v=8; bump the number on every page after any change) |
 | script.js | Ebook countdown, mobile menu, Resources dropdown, scroll animations (linked as script.js?v=4) |
 | track.js | Meta Pixel plus empty slots for a TikTok pixel and Google Analytics 4, and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
 | privacy.html | Privacy page: forms, Meta Pixel, Google Fonts, hosting, Audible referral note, readers under 13 |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
-| *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photo (brian) |
+| *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photos: brian.jpg (800px square crop of photo 1, shown as the round bio portrait) and brian-press-1.jpg / brian-press-2.jpg (480x640 press-kit thumbnails) |
 
 ## Hosting (already done)
 
