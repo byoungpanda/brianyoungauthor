@@ -24,6 +24,8 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
 | style.css | All styling (pages link it as style.css?v=7; bump the number on every page after any change) |
 | script.js | Ebook countdown, mobile menu, Resources dropdown, scroll animations (linked as script.js?v=4) |
+| track.js | Meta Pixel plus empty slots for a TikTok pixel and Google Analytics 4, and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
+| privacy.html | Privacy page: forms, Meta Pixel, Google Fonts, hosting, Audible referral note, readers under 13 |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
 | *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photo (brian) |
 
@@ -33,7 +35,7 @@ GitHub Pages deploys from the main branch root. Custom domain brianyoungauthor.c
 
 ## Forms (one-time activation!)
 
-The contact form and newsletter signups deliver to **hello@brianyoungauthor.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. Easiest: submit the contact form yourself. Both forms have CAPTCHA + honeypot spam protection and redirect to thanks.html.
+The contact form and newsletter signups deliver to **hello@brianyoungauthor.com** via FormSubmit (free, no account). The FIRST submission triggers a confirmation email — **click the link in it once** and everything flows to your inbox from then on. Easiest: submit the contact form yourself. Both forms have CAPTCHA + honeypot spam protection and redirect to thanks.html (newsletter forms add `?signup=newsletter`, the contact form adds `?sent=contact`, so the page shows the right message and the signup is counted).
 
 When the newsletter list grows, graduate to MailerLite or Buttondown (free tiers) for automated sends and unsubscribe handling — swap the form action URL or paste in their embed code.
 
