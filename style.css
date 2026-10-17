@@ -1021,3 +1021,57 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .press-photos { justify-content: center; }
   .press-photos li { width: calc(50% - 0.75rem); max-width: 220px; text-align: center; }
 }
+
+/* ---------- Review quotes ---------- */
+
+.hero-praise { margin: 0 0 2rem; max-width: 33rem; padding-left: 1rem; border-left: 3px solid var(--gold); }
+.hero-sub + .hero-praise { margin-top: -1rem; }
+.ab-narrator + .hero-praise { margin-top: -0.6rem; }
+.hero-praise blockquote, .praise blockquote { margin: 0; }
+.hero-praise p {
+  margin: 0; font-family: var(--display); font-style: italic; font-weight: 600;
+  font-size: 1.35rem; line-height: 1.3; color: #fff;
+}
+.hero-praise figcaption, .praise figcaption {
+  margin-top: 0.5rem; font-size: 0.78rem; font-weight: 800;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-soft);
+}
+.page-hero .hero-praise { margin-inline: auto; padding-left: 0; border-left: 0; }
+
+.praise { margin: 0; }
+.praise p { margin: 0; font-family: var(--display); font-weight: 600; font-size: 1.35rem; line-height: 1.3; color: var(--ink); }
+.section-light .praise figcaption, .section-gold .praise figcaption { color: #9A6A2C; }
+.section-dark .praise p { color: #fff; }
+.series-row .praise { margin: 0 0 1.6rem; max-width: 36rem; padding-left: 1rem; border-left: 3px solid var(--forest); }
+.series-row .praise p { margin: 0; max-width: none; }
+
+.praise-block { margin: 0.5rem 0 2.75rem; }
+.praise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.praise-grid .praise {
+  background: var(--ink-2); border: 1px solid rgba(228, 180, 84, 0.25);
+  border-radius: var(--radius); padding: 1.4rem 1.5rem;
+}
+.praise-grid .praise p { font-size: 1.25rem; }
+.praise-solo { margin: 0 0 1.6rem; max-width: 40rem; padding-left: 1rem; border-left: 3px solid var(--gold); }
+.praise-stack { margin: 0 0 1.8rem; max-width: 42rem; }
+.praise-stack .fact-key { margin: 0 0 0.8rem; }
+.praise-stack .praise { padding-left: 1rem; border-left: 3px solid rgba(228, 180, 84, 0.5); }
+.praise-stack .praise + .praise { margin-top: 1rem; }
+.praise-stack .praise p { font-size: 1.15rem; }
+
+.card-quote {
+  margin: 0 0 1.2rem; padding-left: 0.85rem; border-left: 3px solid var(--forest);
+  font-family: var(--display); font-weight: 600; font-size: 1.15rem; line-height: 1.3; color: var(--ink);
+}
+.card-quote cite {
+  display: block; margin-top: 0.35rem; font-family: var(--body); font-style: normal;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #9A6A2C;
+}
+
+@media (max-width: 940px) {
+  .ab-hero-inner .hero-praise, .series-row .praise { margin-inline: auto; padding-left: 0; border-left: 0; }
+  .book-entry .praise-stack .praise { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 900px) {
+  .praise-grid { grid-template-columns: 1fr; }
+}
