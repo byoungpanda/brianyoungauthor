@@ -25,7 +25,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | style.css | All styling (pages link it as style.css?v=8; bump the number on every page after any change) |
 | script.js | Ebook countdown, mobile menu, Resources dropdown, scroll animations (linked as script.js?v=4) |
 | signup.js | Sends the newsletter signup boxes to Brevo in the background, then opens the thank-you page (linked as /signup.js?v=1 on the 7 pages with a signup box) |
-| track.js | Meta Pixel plus empty slots for a TikTok pixel and Google Analytics 4, and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
+| track.js | Meta Pixel and Google Analytics 4 (G-ZFE17HK48P, with Google signals and ad personalization off), an empty slot for a TikTok pixel, and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
 | privacy.html | Privacy page: forms, Meta Pixel, Google Fonts, hosting, Audible referral note, readers under 13 |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
 | *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photos: brian.jpg (800px square crop of photo 1, shown as the round bio portrait) and brian-press-1.jpg / brian-press-2.jpg (480x640 press-kit thumbnails) |
