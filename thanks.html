@@ -32,13 +32,23 @@
   </section>
 </main>
 <script>
-  /* Forms send people here as thanks.html?signup=newsletter or thanks.html?sent=contact */
+  /* Forms send people here as thanks.html?signup=newsletter (signed up, confirmation email on its way)
+     or thanks.html?sent=contact. thanks.html?signup=confirmed is for after they click Brevo's
+     confirmation link, if Brevo's redirect URL is set to it. */
   (function () {
-    if (!/[?&]signup=newsletter\b/.test(location.search)) return;
-    document.title = "You're on the list | Brian Young";
-    document.getElementById("ty-eyebrow").textContent = "You're on the list";
-    document.getElementById("ty-title").textContent = "Welcome to the reader crew";
-    document.getElementById("ty-sub").textContent = "Release news and launch extras will come to your inbox. Every email has an unsubscribe link. While you wait, hear the first chapter free.";
+    var confirmed = /[?&]signup=confirmed\b/.test(location.search);
+    if (!confirmed && !/[?&]signup=newsletter\b/.test(location.search)) return;
+    if (confirmed) {
+      document.title = "You're on the list | Brian Young";
+      document.getElementById("ty-eyebrow").textContent = "You're on the list";
+      document.getElementById("ty-title").textContent = "Welcome to the reader crew";
+      document.getElementById("ty-sub").textContent = "Release news and launch extras will come to your inbox. Every email has an unsubscribe link. While you wait, hear the first chapter free.";
+    } else {
+      document.title = "Check your inbox | Brian Young";
+      document.getElementById("ty-eyebrow").textContent = "One more step";
+      document.getElementById("ty-title").textContent = "Check your inbox";
+      document.getElementById("ty-sub").textContent = "A confirmation email is on its way. Click the link in it to join the reader crew. If it isn't there in a few minutes, look in your spam or promotions folder. While you wait, hear the first chapter free.";
+    }
     var main = document.getElementById("ty-main");
     main.textContent = "Hear Chapter One";
     main.href = "/listen-chapter-one-v9t4pz/";
