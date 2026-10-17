@@ -883,7 +883,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .card-text { font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.4rem; }
 .card-text strong { color: var(--ink); }
-.card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.card-actions { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.1rem; }
 .card-actions .store-btn { margin-top: 0; }
 .cards-note { margin: 2rem 0 0; max-width: none; }
 .section-dark .cards-note { color: var(--moon-text); }
