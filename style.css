@@ -548,7 +548,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .portrait { margin: 0; text-align: center; }
 .portrait-img {
-  width: 100%; max-width: 270px; margin: 0 auto;
+  width: 100%; max-width: 270px; height: auto; margin: 0 auto;
   border-radius: 50%; box-shadow: var(--shadow-md);
   border: 6px solid var(--paper);
 }
@@ -1000,3 +1000,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .press-facts .fact-key { margin-right: 0.55rem; }
 .section-dark .press-facts { color: var(--moon-text); }
+
+/* ---------- Press kit author photos ---------- */
+
+.press-photos {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 1.5rem;
+}
+.press-photos li { width: 200px; }
+.press-photos a { display: block; color: inherit; text-decoration: none; }
+.press-photos img {
+  width: 100%; height: auto; border-radius: 12px;
+  box-shadow: var(--shadow-md); transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.press-photos a:hover img, .press-photos a:focus-visible img { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.press-photos .photo-label { display: block; margin-top: 0.7rem; font-weight: 700; color: var(--slate); }
+.press-photos a:hover .photo-label { color: #9A6A2C; }
+.press-photos .photo-meta { display: block; font-size: 0.88rem; color: var(--slate-soft); }
+@media (max-width: 940px) {
+  .press-photos { justify-content: center; }
+  .press-photos li { width: calc(50% - 0.75rem); max-width: 220px; text-align: center; }
+}
