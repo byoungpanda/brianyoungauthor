@@ -8,7 +8,7 @@
   var IDS = {
     meta: "1885360009141177", // Meta Pixel (Facebook and Instagram ads)
     tiktok: "",               // TikTok Pixel ID, from TikTok Ads Manager > Tools > Events
-    ga4: ""                   // Google Analytics 4 measurement ID, like G-XXXXXXXXXX
+    ga4: "G-ZFE17HK48P"       // Google Analytics 4 (account "Brian Young Author", property brianyoungauthor.com)
   };
 
   /* ---------- Meta Pixel ---------- */
@@ -55,7 +55,8 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     gtag("js", new Date());
-    gtag("config", IDS.ga4);
+    /* Young readers use this site, so visits are never used for ad personalization or tied to Google accounts */
+    gtag("config", IDS.ga4, { allow_google_signals: false, allow_ad_personalization_signals: false });
   }
 
   /* ---------- One event, sent to every service that is on ----------
