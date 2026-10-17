@@ -7,7 +7,7 @@
 
   var IDS = {
     meta: "1885360009141177", // Meta Pixel (Facebook and Instagram ads)
-    tiktok: "",               // TikTok Pixel ID, from TikTok Ads Manager > Tools > Events
+    tiktok: "DB9S873C77UAEK31BCK0", // TikTok Pixel "brianyoungauthor.com" (TikTok Ads Manager > Tools > Events Manager)
     ga4: "G-ZFE17HK48P"       // Google Analytics 4 (account "Brian Young Author", property brianyoungauthor.com)
   };
 
