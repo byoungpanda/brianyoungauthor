@@ -4,7 +4,7 @@
   "use strict";
 
   /* ---------- Countdown to release day ---------- */
-  // Local time on Nov 26, 2026. Change this one line for future books.
+  // The ebook release: local midnight on Nov 23, 2026. Change this one line for future books.
   var RELEASE = new Date(2026, 10, 23, 0, 0, 0); // months are 0-indexed: 10 = November
 
   var els = {
@@ -21,11 +21,13 @@
     var diff = RELEASE.getTime() - Date.now();
 
     if (diff <= 0) {
-      // Release day has arrived — celebrate instead of counting.
+      // Release day has arrived: celebrate instead of counting.
       var label = document.querySelector(".countdown-label");
-      if (label) label.textContent = "Out now!";
+      if (label) label.textContent = "The ebook is out now";
       if (els.wrap) els.wrap.innerHTML =
-        '<p style="font-family: var(--display); font-size: 1.6rem; color: var(--gold); margin: 0;">It’s here. Happy reading! ✨</p>';
+        '<p style="font-family: var(--display); font-size: 1.6rem; color: var(--gold); margin: 0;">It’s here. Happy reading.</p>';
+      var buy = document.querySelector(".countdown-actions .btn");
+      if (buy) buy.textContent = "Get the ebook";
       clearInterval(timer);
       return;
     }
@@ -102,9 +104,11 @@
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (!reduced && "IntersectionObserver" in window) {
-    var targets = document.querySelectorAll(
+    // Only animate what starts below the fold, so nothing a visitor can already see is hidden
+    var fold = window.innerHeight || document.documentElement.clientHeight;
+    var targets = Array.prototype.filter.call(document.querySelectorAll(
       ".series-row, .book-entry, .roadmap-slot, .section-title, .section-lede, .fact-list, .event, .portrait, .contact-form, .store-card"
-    );
+    ), function (el) { return el.getBoundingClientRect().top > fold; });
     targets.forEach(function (el) { el.classList.add("reveal"); });
 
     var io = new IntersectionObserver(function (entries) {
