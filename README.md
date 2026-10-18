@@ -18,7 +18,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | audiobook/index.html | Public audiobook page at /audiobook/ (in search): Audible button, Chapter One player, narrator facts |
 | 404.html | Shown by GitHub Pages for any missing URL; every link in it is absolute |
 | share/ | 1200x630 social share images: out-now.jpg (home, Sophia Sprite, store, preorder, first chapters), audiobook.jpg (audiobook and Chapter One pages), press.jpg (press kit and releases) |
-| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive), plus the press-kit cover files: Sophia_Sprite_Cover_1800x2880.jpg (300 dpi front cover) and Sophia_Sprite_Audiobook_Cover_3000px.jpg, and the full-size author photos Brian_Young_Author_Photo_1.jpg (2544x3392, the main one) and Brian_Young_Author_Photo_2.jpg (2208x2944) |
+| downloads/ | Free guide and kit PDFs linked from the three pages above (file names are case-sensitive), plus the press-kit cover files: Sophia_Sprite_Cover_1800x2880.jpg (300 dpi front cover) and Sophia_Sprite_Audiobook_Cover_3000px.jpg, and the full-size author photos Brian_Young_Author_Photo_1.jpg (2544x3392, the main one, also cropped for the bio), _2.jpg (2544x3392) and _3.jpg (2208x2944) |
 | sitemap.xml, robots.txt | Public pages and guide PDFs for search engines (the unlisted newsletter pages stay out on purpose) |
 | thanks.html | Shown after someone sends a message or signs up |
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
@@ -28,7 +28,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | track.js | Meta Pixel and Google Analytics 4 (G-ZFE17HK48P, with Google signals and ad personalization off), the TikTok Pixel (DB9S873C77UAEK31BCK0), and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
 | privacy.html | Privacy page: forms, Meta Pixel, Google Fonts, hosting, Audible referral note, readers under 13 |
 | CNAME | Tells GitHub Pages the custom domain is brianyoungauthor.com |
-| *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photos: brian.jpg (800px square crop of photo 1, shown as the round bio portrait) and brian-press-1.jpg / brian-press-2.jpg (480x640 press-kit thumbnails) |
+| *.jpg | Book covers (sasquatch-secret, sasquatch-secret-audiobook, banshee-bargain, sacred-vein, shadow-archive, hidden-network, pinky-whiskers) and author photos: brian.jpg (800px square crop of press photo 1, shown as the round bio portrait) and brian-press-1.jpg to brian-press-3.jpg (480x640 thumbnails of downloads/Brian_Young_Author_Photo_1-3.jpg for the press kit) |
 
 ## Hosting (already done)
 
