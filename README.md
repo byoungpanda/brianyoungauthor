@@ -22,7 +22,7 @@ Fast, free author site for GitHub Pages. No frameworks, no build step. Fully sel
 | sitemap.xml, robots.txt | Public pages and guide PDFs for search engines (the unlisted newsletter pages stay out on purpose) |
 | thanks.html | Shown after someone sends a message or signs up |
 | links/index.html | TikTok bio page at /links (unlisted, noindex). Swap campaigns by editing the five EDIT lines in its FEATURED BLOCK |
-| style.css | All styling (pages link it as style.css?v=9; bump the number on every page after any change) |
+| style.css | All styling (pages link it as style.css?v=10; bump the number on every page after any change) |
 | script.js | Ebook countdown, mobile menu, Resources dropdown, scroll animations (linked as script.js?v=4) |
 | signup.js | Sends the newsletter signup boxes to Brevo in the background, then opens the thank-you page (linked as /signup.js?v=1 on the 7 pages with a signup box) |
 | track.js | Meta Pixel and Google Analytics 4 (G-ZFE17HK48P, with Google signals and ad personalization off), the TikTok Pixel (DB9S873C77UAEK31BCK0), and the click events (Listen on Audible, ebook preorder, print buys, sample plays, signups). Paste an ID at the top to switch a service on, then list it in privacy.html |
